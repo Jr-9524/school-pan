@@ -1,0 +1,137 @@
+body{
+    width: 100%;
+    min-height: 100vh;
+    max-height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+}
+
+section{
+    max-width: 80%;
+    height: 100vh;
+    border: 1px solid;
+    margin: auto;
+}
+
+#navigation_container{
+    padding: 8px;
+    min-height: 5vh;
+    max-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.filter-select-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    justify-content: space-around;
+}
+
+.search-container{
+    position: relative;
+    display: flex;
+    width: 20%;
+    min-height: 5vh;
+}   
+
+.dropdown-container{
+    align-self: flex-start;
+    display: inline-block;
+    border: none;
+    width: 3rem;
+}
+  
+  .dropdown-menu{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    width: 150px;
+  }
+  
+  .dropdown-container:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu li {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu li:hover {
+    background-color: #ddd;
+  }
+
+.student-list-table-container{
+    width: 100%;
+    overflow: auto;
+}
+
+/* Student Form */
+.student-form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.student-form-inputs, .student-form-select, .student-form-subjects{
+    display: flex;
+    gap: 1rem;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    flex-wrap: wrap;
+}
+
+.student-form-subjects{
+    max-height: 50vh;
+    max-width: 100%;
+    border: 2px solid;
+    padding: 12px;
+    border-radius: 5px;
+    justify-content: flex-start;
+}
+
+.student-form-button{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Categories */
+.category-form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 30%;
+    margin: auto;
+}
+
+.subject-form{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
+}
+
+
+
+
+

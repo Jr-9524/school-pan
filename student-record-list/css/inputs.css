@@ -1,0 +1,30 @@
+select{
+    max-width: 25%;
+    min-width: 10%;
+    width: 8rem;
+    font-weight: 700;
+    padding: 8px;
+    font-size: 0.9rem;
+    border-radius: 12px;
+    border: 2px solid;
+}
+
+input{
+    min-width: 10%;
+    border-radius: 12px;
+    padding: 8px;
+    border: 2px solid;
+}
+
+.search-container input{
+    width: 100%;
+}
+
+.student-form-subjects input{
+    cursor: pointer;
+}
+
+/* Categories */
+.category-form input{
+    margin-bottom: 1rem;
+}
