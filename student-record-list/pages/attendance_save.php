@@ -28,25 +28,14 @@
                                          WHERE studentid = '$qr_scan' 
                                          AND `subject-code` = '$subject_code' 
                                          AND section = '$section'
-                                         AND DATE(scan_dateTime) = CURDATE()";
+                                         AND DATE(scan_dateTime) = DATE(NOW())";
             
                 $attendance_result = $conn->query($checkAttendanceQuery);
             
-                if ($attendance_result->num_rows > 0) {
-                    $update_sql = "UPDATE attendance_record 
-                                   SET scan_dateTime = NOW() 
-                                   WHERE studentid = '$qr_scan' 
-                                   AND `subject-code` = '$subject_code' 
-                                   AND section = '$section'
-                                   AND DATE(scan_dateTime) = CURDATE()";
-            
-                    if ($conn->query($update_sql) === TRUE) {
-                        echo "<div class='alert alert-success text-center m-auto' role='alert' style='width: 300px;'>
-                                <strong>Success!</strong> Attendance successfully recorded!
-                              </div>";
-                    } else {
-                        echo "Error updating attendance: " . $conn->error;
-                    }
+                if ($attendance_result->num_rows > 0) {      
+                    echo "<div class='alert alert-info text-center m-auto' role='alert' style='width: 300px;'>
+                            <strong>Notice!</strong> Already recorded today!
+                          </div>";
                 } else {
                     $insert_sql = "INSERT INTO attendance_record (studentid, `subject-code`, section, scan_dateTime) 
                                    VALUES ('$qr_scan', '$subject_code', '$section', NOW())";
@@ -60,11 +49,12 @@
                     }
                 }
             } else {
-                echo "No matching student data found.";
+                echo "<div class='alert alert-primary text-center m-auto' role='alert' style='width: 300px;'>
+                        <strong>No Match</strong> No matching student data found.
+                      </div>";
             }            
         }
 
-        // Uncomment nalang para madelay pag reload ng page
         sleep(0.5);
         exit;
     } 

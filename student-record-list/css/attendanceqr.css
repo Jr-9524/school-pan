@@ -1,15 +1,13 @@
-
-
 .scanner-container {
     margin: auto;
     text-align: center;
-    border: 2px solid #007bff;
+    border: 2px solid #003366;
     border-radius: 10px;
     padding: 20px;
     background-color: white;
-    width: 400px;
 }
 
+/* Para sa qr */
 .qr-video {
     margin: auto;
     width: 300px;
@@ -17,6 +15,7 @@
     border: 1px solid #ccc;
     border-radius: 10px;
     overflow: auto;
+    min-height: 250px;
 }
 
 #qr-video video {
