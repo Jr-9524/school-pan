@@ -1,0 +1,84 @@
+/*CCS Custom propersties*/
+:root {
+    --primary-color: #003366;
+    --secondary-color: #3399FF;
+    --bg-color: #F8F9FA;
+    --border-color: #DEE2E6;
+    --text-color: #343A40;
+    --text-table-light-color: #fff;
+    --table-header-bg: #002B5B;
+    --border-color: #ccc;
+  }
+  
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+  
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+table thead th {
+    background-color: var(--table-header-bg) !important;
+    color: var(--text-table-light-color) !important;
+  }
+
+.header{
+    background-color: var(--primary-color);
+}
+
+.filter-section {
+    background-color: var(--bg-color);
+    margin-bottom: 20px;
+}
+
+input.form-control:focus,
+textarea.form-control:focus,
+select.form-select:focus {
+  box-shadow: none !important;
+  outline: none !important;
+  border-color: #ced4da !important;
+}
+
+.custom-rounded-top{
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.custom-rounded-bottom{
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.bottom-border{
+    border-bottom: 1px solid var(--border-color);
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--bg-color);
+}
+
+.add-course-form{
+    max-width: 600px;
+}
+
+.courses-checkbox-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.courses-checkbox-container {
+    max-height: 200px;
+    overflow-y: auto;
+}
